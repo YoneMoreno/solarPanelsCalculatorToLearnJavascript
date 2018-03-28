@@ -81,4 +81,16 @@ function calculateSolar() {
 
     var numberPanelsNeeded = Math.ceil(realWattNeeds / panelPower);
     console.log('Total number of panels needed: ' + numberPanelsNeeded);
+
+    var feedback = '';
+    feedback += '<p>Based on your average daily use of XXX kWh,' +
+        ' you will need to purchase XXX brand solar panels to offset 100%' +
+        ' of your electricity bill.</p>';
+    feedback += '<h2>Additional details</h2>';
+    feedback += '<p>Your average daily electricity consumption: XXX kWh per day</p>';
+    feedback += '<p>Average sunshine per day: XXX hours</p>';
+    feedback += '<p>Realistic watts needed per hour: XXX watts/hour</p>';
+    feedback += '<p>The XXX panel you selected generates about XXX watts per hour</p>';
+
+    document.getElementById('feedback').innerHTML = feedback;
 }
