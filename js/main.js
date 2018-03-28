@@ -78,4 +78,7 @@ function calculateSolar() {
     console.log('The selected panel is: ', panel,
         ' its power is: ', panelPower,
         ' and its name is: ', panelName);
+
+    var numberPanelsNeeded = Math.ceil(realWattNeeds / panelPower);
+    console.log('Total number of panels needed: ' + numberPanelsNeeded);
 }
