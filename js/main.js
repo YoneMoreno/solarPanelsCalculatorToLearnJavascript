@@ -45,6 +45,13 @@ function sunHours() {
     return (hours);
 }
 
+var userSelection = document.forms.solarForm.panel.selectedIndex;
+var optionArray = document.forms.solarForm.panel.options;
+var power = optionArray[userSelection].value;
+var name = optionArray[userSelection].text;
+var panelPowerName = [power,name];
+console.log(panelPowerName);
+
 function calculateSolar() {
     var dailyUseKw = addMonths('mpc');
     console.log('Our daily use of kw: ', dailyUseKw);
@@ -62,4 +69,5 @@ function calculateSolar() {
 
     var realWattNeeds = realKwNeeds * 1000;
     console.log('In watts our real needs are: ', realWattNeeds);
+
 }
