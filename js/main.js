@@ -45,12 +45,14 @@ function sunHours() {
     return (hours);
 }
 
-var userSelection = document.forms.solarForm.panel.selectedIndex;
-var optionArray = document.forms.solarForm.panel.options;
-var power = optionArray[userSelection].value;
-var name = optionArray[userSelection].text;
-var panelPowerName = [power,name];
-console.log(panelPowerName);
+function calculatePanel() {
+    var userSelection = document.forms.solarForm.panel.selectedIndex;
+    var optionArray = document.forms.solarForm.panel.options;
+    var power = optionArray[userSelection].value;
+    var name = optionArray[userSelection].text;
+    var panelPowerName = [power, name];
+    return(panelPowerName);
+}
 
 function calculateSolar() {
     var dailyUseKw = addMonths('mpc');
@@ -70,4 +72,6 @@ function calculateSolar() {
     var realWattNeeds = realKwNeeds * 1000;
     console.log('In watts our real needs are: ', realWattNeeds);
 
+    var panel = calculatePanel();
+    console.log('The selected panel is: ',panel);
 }
