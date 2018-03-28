@@ -1,9 +1,9 @@
 /*jslint browser:true */
 "use strict";
 
-var annualUseKw = 0, dailyUseKw = 0, monthlyUseKw = 0;
 
 function addMonths(elem) {
+    var annualUseKw = 0, dailyUseKw = 0, monthlyUseKw = 0;
     var months = document.getElementById(elem).getElementsByTagName('input');
     console.log(months);
 
