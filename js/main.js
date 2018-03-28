@@ -51,7 +51,7 @@ function calculatePanel() {
     var power = optionArray[userSelection].value;
     var name = optionArray[userSelection].text;
     var panelPowerName = [power, name];
-    return(panelPowerName);
+    return (panelPowerName);
 }
 
 function calculateSolar() {
@@ -67,11 +67,15 @@ function calculateSolar() {
 
     var realKwNeeds = minKwNeeded * 1.25; //There are clouds and
     // rain so we need to increment they kw being generated
-    console.log('The real kw needs are: ',realKwNeeds);
+    console.log('The real kw needs are: ', realKwNeeds);
 
     var realWattNeeds = realKwNeeds * 1000;
     console.log('In watts our real needs are: ', realWattNeeds);
 
     var panel = calculatePanel();
-    console.log('The selected panel is: ',panel);
+    var panelPower = panel[0];
+    var panelName = panel[1];
+    console.log('The selected panel is: ', panel,
+        ' its power is: ', panelPower,
+        ' and its name is: ', panelName);
 }
