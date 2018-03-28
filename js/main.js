@@ -3,15 +3,13 @@
 
 
 function addMonths(elem) {
-    var annualUseKw = 0, dailyUseKw = 0, monthlyUseKw = 0;
+    var annualUseKw = 0, dailyUseKw, monthlyUseKw = 0;
     var months = document.getElementById(elem).getElementsByTagName('input');
-    console.log(months);
-
     for (var i = 0; i < months.length; i++) {
         monthlyUseKw = Number(months[i].value);
         annualUseKw += monthlyUseKw;
     }
-    dailyUseKw = Math.ceil(annualUseKw / 365);
+    dailyUseKw = annualUseKw / 365;
     return dailyUseKw;
 }
 
