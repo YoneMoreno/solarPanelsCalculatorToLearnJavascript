@@ -52,4 +52,14 @@ function calculateSolar() {
 
     var sunHoursPerDay = sunHours();
     console.log('Our hours of sun per day are: ', sunHoursPerDay);
+
+    var minKwNeeded = dailyUseKw / sunHoursPerDay;
+    console.log('The minimum kw needed: ', minKwNeeded);
+
+    var realKwNeeds = minKwNeeded * 1.25; //There are clouds and
+    // rain so we need to increment they kw being generated
+    console.log('The real kw needs are: ',realKwNeeds);
+
+    var realWattNeeds = realKwNeeds * 1000;
+    console.log('In watts our real needs are: ', realWattNeeds);
 }
