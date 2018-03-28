@@ -83,7 +83,8 @@ function calculateSolar() {
     console.log('Total number of panels needed: ' + numberPanelsNeeded);
 
     var feedback = '';
-    feedback += '<p>Based on your average daily use of ' + realKwNeeds + ' kWh,' +
+    feedback += '<p>Based on your average daily use of' +
+        ' ' + Math.round(dailyUseKw) + ' kWh,' +
         ' you will need to purchase ' + numberPanelsNeeded + ' brand solar' +
         ' panels to offset 100%' +
         ' of your electricity bill.</p>';
